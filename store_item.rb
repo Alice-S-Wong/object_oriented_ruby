@@ -10,15 +10,19 @@ class Fruit
 
   attr_writer :price, :color
 
-  def initialize(name, price, color)
-    @name = name
-    @price = price
-    @color = color
+  def initialize(input_options)
+    @name = input_options[:name]
+    @price = input_options[:price]
+    @color = input_options[:color]
   end
 
 end
 
-apple = Fruit.new("Apple", 1, "red")
+apple = Fruit.new({
+  :name => "Apple", 
+  :price => 1,
+  :color => "red"
+})
 
 puts apple.name
 puts apple.price

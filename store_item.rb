@@ -6,25 +6,9 @@
 
 class Fruit
 
-  def name
-    @name
-  end
+  attr_reader :name, :price, :color
 
-  def price
-    @price
-  end
-
-  def price=(input_price)
-    @price = input_price
-  end
-
-  def color=(input_color)
-    @color = input_color
-  end
-
-  def color
-    @color
-  end
+  attr_writer :price, :color
 
   def initialize(name, price, color)
     @name = name
@@ -39,3 +23,7 @@ apple = Fruit.new("Apple", 1, "red")
 puts apple.name
 puts apple.price
 puts apple.color
+
+apple.price = 2
+
+puts apple.price

@@ -18,16 +18,33 @@ class Fruit
 
 end
 
+class Perishable < Fruit
+
+  attr_reader :shelf_life
+
+  attr_writer :shelf_life
+
+  def initialize(input_options)
+    super
+    @shelf_life = input_options[:shelf_life]
+  end
+
+end
+
 apple = Fruit.new({
   :name => "Apple", 
   :price => 1,
   :color => "red"
 })
 
-puts apple.name
-puts apple.price
-puts apple.color
+milk = Perishable.new(
+  :name => "Milk",
+  :price => 5,
+  :color => "white",
+  :shelf_life => "1 week"
+)
 
-apple.price = 2
-
-puts apple.price
+p milk.shelf_life
+milk.shelf_life = "2 weeks"
+p milk.shelf_life
+p milk.name

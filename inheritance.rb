@@ -32,13 +32,15 @@ class Bike < Vehicle
   def ring_bell
     puts "Ring ring!"
   end
-  
+
 end
 
 honda = Car.new
 honda.accelerate
+honda.brake
 honda.honk_horn
 
 generic_bike = Bike.new
 generic_bike.accelerate
+generic_bike.brake
 generic_bike.ring_bell

@@ -1,10 +1,4 @@
-#item1 = {:name => "pear", :price => 2, :color => "green"}
-#item2 = {:name => "apple", :price => 1, :color => "red"}
-#item3 = {:name => "banana", :price => 3, :color => "yellow"}
-
-#p "#{item1[:name]} is $#{item1[:price]} per item. They are #{item1[:color]} in color."
-
-class Fruit
+class Food
 
   attr_reader :name, :price, :color
 
@@ -18,7 +12,7 @@ class Fruit
 
 end
 
-class Perishable < Fruit
+class Perishable < Food
 
   attr_reader :shelf_life
 
@@ -31,7 +25,7 @@ class Perishable < Fruit
 
 end
 
-apple = Fruit.new({
+apple = Food.new({
   :name => "Apple", 
   :price => 1,
   :color => "red"
